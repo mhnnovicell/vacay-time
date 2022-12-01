@@ -7,7 +7,7 @@
       v-if="!showCountdown"
       class="flex w-full h-full justify-center self-center items-center text-center"
     >
-      <div class="m-4" v-if="days > 1">
+      <div class="m-4" v-if="days >= 1">
         {{ days }}
         <p>Days</p>
       </div>
