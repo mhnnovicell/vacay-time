@@ -52,15 +52,27 @@ const minutes = ref(0);
 const hours = ref(0);
 const days = ref(0);
 
-const countDownDate = props.blok?.endDate;
+const countDownDate = new Date(props.blok?.birthdayStartDate).getTime();
 
 const hasEnded = countDownDate - now.value;
 
 const hasEndedBool = ref(false);
 
+const birthdayDate = ref(props.blok?.birthdayStartDate);
+const christmasDate = ref(props.blok?.christmasStartDate);
+const newYearsDate = ref(props.blok?.newYearsStartDate);
+const summerVacationDate = ref(props.blok?.summerVacationStartDate);
+
+console.log(
+  new Date(birthdayDate.value).getTime() - now.value,
+  'birthdayDate.value < now.value'
+);
+console.log(new Date(birthdayDate.value).getTime(), 'birthdayDate.value');
+console.log(now.value, 'now.value');
+
 const getTimeRemaining = () => {
   const total =
-    Date.parse(props.blok?.endDate.toString()) -
+    Date.parse(props.blok?.birthdayStartDate.toString()) -
     Date.parse(new Date().toString());
   seconds.value = Math.floor((total / 1000) % 60);
   minutes.value = Math.floor((total / 1000 / 60) % 60);
