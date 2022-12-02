@@ -11,27 +11,27 @@
     >
       <div class="m-4 text-white" v-if="days >= 1">
         <span class="text-4xl">{{ days }}</span>
-        <p class="text-xl font-bold">{{ days >= 1 ? 'Days' : 'Day' }}</p>
+        <p class="text-xl font-bold">{{ days === 1 ? 'Day' : 'Days' }}</p>
       </div>
 
       <div class="m-4 text-4xl text-white" v-if="hours >= 1">
         <span class="text-4xl">{{ hours }}</span>
         <p class="text-xl font-bold">
-          {{ hours >= 1 ? 'Hours' : 'Hour' }}
+          {{ hours === 1 ? 'Hour' : 'Hours' }}
         </p>
       </div>
 
       <div class="m-4 text-4xl text-white" v-if="minutes >= 1">
         <span class="text-4xl">{{ minutes }}</span>
         <p class="text-xl font-bold">
-          {{ minutes >= 1 ? 'Minutes' : 'Minute' }}
+          {{ minutes === 1 ? 'Minute' : 'Minutes' }}
         </p>
       </div>
 
       <div class="m-4 text-4xl text-white">
         <span class="text-4xl">{{ seconds }}</span>
         <p class="text-xl font-bold">
-          {{ seconds >= 1 ? 'Seconds' : 'Second' }}
+          {{ seconds === 1 ? 'Second' : 'Seconds' }}
         </p>
       </div>
     </div>
