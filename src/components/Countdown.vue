@@ -1,30 +1,32 @@
 <template>
-  <section
-    v-editable="blok"
-    class="flex w-full h-full justify-center self-center items-center text-center"
-  >
+  <section v-editable="blok" class="w-full h-full flex flex-col">
+    <h1
+      class="w-full text-center flex justify-center self-center items-center mt-16 align-middle text-7xl italic text-white headline"
+    >
+      Vacay Time
+    </h1>
     <div
       v-if="!showCountdown"
-      class="flex w-full h-full justify-center self-center items-center text-center"
+      class="flex w-full h-1/2 justify-center self-center items-center text-center mt-16"
     >
-      <div class="m-4" v-if="days >= 1">
-        {{ days }}
-        <p>Days</p>
+      <div class="m-4 text-white" v-if="days >= 1">
+        <span class="text-4xl">{{ days }}</span>
+        <p class="text-xl font-bold">Days</p>
       </div>
 
-      <div class="m-4" v-if="hours > 1">
-        {{ hours }}
-        <p>Hours</p>
+      <div class="m-4 text-4xl text-white" v-if="hours > 1">
+        <span class="text-4xl">{{ hours }}</span>
+        <p class="text-xl font-bold">Hours</p>
       </div>
 
-      <div class="m-4" v-if="minutes > 1">
-        {{ minutes }}
-        <p>Minutes</p>
+      <div class="m-4 text-4xl text-white" v-if="minutes > 1">
+        <span class="text-4xl">{{ minutes }}</span>
+        <p class="text-xl font-bold">Minutes</p>
       </div>
 
-      <div class="m-4">
-        {{ seconds }}
-        <p>Seconds</p>
+      <div class="m-4 text-4xl text-white">
+        <span class="text-4xl">{{ seconds }}</span>
+        <p class="text-xl font-bold">Seconds</p>
       </div>
     </div>
 
@@ -102,3 +104,9 @@ const showCountdown = computed(() => {
   return hasEndedBool.value;
 });
 </script>
+
+<style>
+.headline {
+  font-family: 'Cookie', cursive;
+}
+</style>
