@@ -14,12 +14,12 @@
         <p class="text-xl font-bold">Days</p>
       </div>
 
-      <div class="m-4 text-4xl text-white" v-if="hours > 1">
+      <div class="m-4 text-4xl text-white" v-if="hours >= 1">
         <span class="text-4xl">{{ hours }}</span>
         <p class="text-xl font-bold">Hours</p>
       </div>
 
-      <div class="m-4 text-4xl text-white" v-if="minutes > 1">
+      <div class="m-4 text-4xl text-white" v-if="minutes >= 1">
         <span class="text-4xl">{{ minutes }}</span>
         <p class="text-xl font-bold">Minutes</p>
       </div>
