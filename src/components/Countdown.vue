@@ -3,7 +3,7 @@
     <h1
       class="w-full text-center flex justify-center self-center items-center mt-16 align-middle text-7xl italic text-white headline"
     >
-      Vacay Time
+      {{ headlineText }}
     </h1>
     <div
       v-if="!showCountdown"
@@ -114,7 +114,18 @@ const startTimer = () => {
   }, 1000);
 };
 
+const headlineText = ref('');
+
+const setHeadlineText = () => {
+  if (showCountdown) {
+    headlineText.value = 'Birthday Time';
+  } else {
+    headlineText.value = 'Birthday Time';
+  }
+};
+
 onMounted(() => {
+  setHeadlineText();
   startTimer();
 });
 
