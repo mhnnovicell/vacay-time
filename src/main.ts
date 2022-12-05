@@ -1,6 +1,7 @@
 import { createApp, defineAsyncComponent } from 'vue';
 import './main.css';
 import { StoryblokVue, apiPlugin } from '@storyblok/vue';
+import Particles from 'vue3-particles';
 
 import App from './App.vue';
 
@@ -11,6 +12,8 @@ app.use(StoryblokVue, {
   bridge: process.env.NODE_ENV !== 'production' ? true : false, // optimizes by excluding the bridge on production
   use: [apiPlugin],
 });
+
+app.use(Particles);
 
 app.component(
   'Page',

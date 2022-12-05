@@ -12,9 +12,11 @@
     "@chenfengyuan/vue-countdown": "^2.1.0",
     "@storyblok/vue": "^6.3.2",
     "date-holidays": "^3.16.11",
+    "tsparticles": "^2.5.3",
     "vite-plugin-mkcert": "^1.10.1",
     "vue": "^3.2.45",
-    "vue3-flip-countdown": "^0.1.6"
+    "vue3-flip-countdown": "^0.1.6",
+    "vue3-particles": "^2.5.3"
   },
   "devDependencies": {
     "@types/node": "^18.11.10",
