@@ -13,6 +13,29 @@ export default defineConfig({
       devOptions: {
         enabled: true,
       },
+      includeAssets: [
+        'android-chrome-192x192.png',
+        'apple-touch-icon.png',
+        'android-chrome-512x512.png',
+      ],
+      manifest: {
+        name: 'Vacay Time',
+        short_name: 'Vacay Time',
+        description: 'Vacation Time',
+        theme_color: '#23abd0',
+        icons: [
+          {
+            src: 'android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: 'android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+        ],
+      },
     }),
   ],
 
