@@ -118,9 +118,9 @@ const headlineText = ref('');
 
 const setHeadlineText = () => {
   if (showCountdown) {
-    headlineText.value = 'Birthday Time';
+    headlineText.value = 'Vacay Time';
   } else {
-    headlineText.value = 'Birthday Time';
+    headlineText.value = 'Vacay Time';
   }
 };
 
