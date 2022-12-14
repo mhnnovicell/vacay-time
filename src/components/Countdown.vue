@@ -79,9 +79,20 @@ const hasEnded = countDownDate - now.value;
 const hasEndedBool = ref(false);
 
 const birthdayDate = ref(props.blok?.birthdayStartDate);
+const birthdayDateTime = ref(new Date(props.blok?.birthdayStartDate).getTime());
+
 const christmasDate = ref(props.blok?.christmasStartDate);
+const christmasDateTime = ref(
+  new Date(props.blok?.christmasStartDate).getTime()
+);
+
 const newYearsDate = ref(props.blok?.newYearsStartDate);
+const newYearsDateTime = ref(new Date(props.blok?.newYearsStartDate).getTime());
+
 const summerVacationDate = ref(props.blok?.summerVacationStartDate);
+const summerVacationDateTime = ref(
+  new Date(props.blok?.summerVacationStartDate).getTime()
+);
 
 console.log(
   new Date(birthdayDate.value).getTime() - now.value,
@@ -131,6 +142,13 @@ onMounted(() => {
 
 const showCountdown = computed(() => {
   return hasEndedBool.value;
+});
+
+// Based on this snippet https://gist.github.com/danesparza/1093992
+const isDatesOverlapping = computed(() => {
+  return (
+    birthdayDateTime > christmasDateTime || christmasDateTime > birthdayDateTime
+  );
 });
 
 const particlesLoaded = async (container: any) => {
